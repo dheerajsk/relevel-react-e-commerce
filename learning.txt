@@ -57,3 +57,22 @@ Java => Maven.
 .Net, C# => Nuget.
 Python => pip.
 JS(Node, React, Angular) => NPM, YARN
+
+
+
+Async=> Get data.
+Component prepares-> Renders.=> Rendered.
+
+-------Async Starts.------------------------------------------Data fetched.
+-------COmponent rendering Starts----- rendered-----productsState.
+
+Creation.
+Rendering/MOunting.[Start, End]
+useState [States in React].
+
+State => 
+1. box which contains data
+2. refreshes your component.
+3. Allows data to survive.
+
+Destroy,

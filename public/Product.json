@@ -1,0 +1,49 @@
+[
+    {
+        "name":"iPhone 14",
+        "price":"95000",
+        "detail":"Created By Apple",
+        "image":"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655662/Croma%20Assets/Communication/Mobiles/Images/261979_oq7vjv.png/mxw_640,f_auto"
+    },
+    {
+        "name":"MI Power Bank Hypersonic",
+        "price":"4000",
+        "detail":"20000mAh 50W Lithium Polymer Supports Laptop Charging 50W Mobile Charging | Power Delivery 3.0 Fast Charging | Triple Output Port",
+        "image":"https://m.media-amazon.com/images/I/71uxFBB3OtL._SX679_.jpg"
+    }
+    ,
+    {
+        "name":"Vibez",
+        "price":"450",
+        "detail":"Vibez by Lifelong Gaming Earphones with External Mic| In-Ear Gaming Wired Headphones| Gaming Headset|Gaming Earphone with Detachable Microphone for PC, PS4, Mobiles, Tablets (VBGE01 Quest ,1 Year Warranty, Black)",
+        "image":"https://m.media-amazon.com/images/I/71JNjulkJ-L._SX679_.jpg"
+    },
+
+    {
+        "name":"Canon EOS 200D",
+        "price":"56000",
+        "detail":"24.1MP Digital SLR Camera + EF-S 18-55mm f4 is STM Lens (Black)",
+        "image":"https://m.media-amazon.com/images/I/81cEKnH692L._SX679_.jpg"
+    },
+
+    {
+        "name":"TP-link N300 WiFi Wireless Router",
+        "price":"619",
+        "detail":"TL-WR845N | 300Mbps Wi-Fi Speed | Three 5dBi high gain Antennas | IPv6 Compatible | AP/RE/WISP Mode | Parental Control | Guest Network",
+        "image":"https://m.media-amazon.com/images/I/41fQ5NSkEWL._SX679_.jpg"
+    },
+
+    {
+        "name":"2021 Apple 10.2-inch (25.91 cm) iPad",
+        "price":"30000",
+        "detail":"with A13 Bionic chip (Wi-Fi, 64GB) - Space Grey (9th Generation)",
+        "image":"https://m.media-amazon.com/images/I/31+KEhn35VL._SX342_SY445_.jpg"
+    },
+
+    {
+        "name":"2022 Apple TV ",
+        "price":"50000",
+        "detail":"4K Wi‑Fi with 64GB Storage (3rd Generation)",
+        "image":"https://m.media-amazon.com/images/I/616bgkA2J0L._SX679_.jpg"
+    }
+]
