@@ -15,9 +15,10 @@ React Module.
 4. Hwo React Starts - Done.
     
 
-4. How to run project.
-5. Folders and file structures.
-6. Components.
+4. How to run project. - Done.
+5. Folders and file structures. - Done.
+6. Components. - Done.
+6.1 NPM
 7. JSX.
 8. Virtual DOM
 9. Lifecycle hooks.
@@ -40,3 +41,19 @@ React Module.
 
 DOM => Tree. Heavy Structure.
 DOM Manipulation=> Expensive operations.
+
+
+
+NPM => Node Package Manager.
+
+manage packages.
+    => Stores them.
+    => updates them by managing different versions.
+    => Manage removals of pakcages.
+    => manages execution.
+    => manage installation.
+
+Java => Maven.
+.Net, C# => Nuget.
+Python => pip.
+JS(Node, React, Angular) => NPM, YARN
