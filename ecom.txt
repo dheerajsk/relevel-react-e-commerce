@@ -3,9 +3,9 @@ To Dos For E-com application.
 Login Page.
 SignUp Page.
 Home Page.
-    => Header.
-    => Footer
-    => Show Product List.
+    => Header. - Done.
+    => Footer - HW.
+    => Show Product List. 
     => SearchBar.
 
 Order.

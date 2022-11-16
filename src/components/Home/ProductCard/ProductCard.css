@@ -1,0 +1,18 @@
+
+img{
+    height: 270px;
+    width: 260px;
+}
+
+.card{
+    width: 20%;
+    margin: 16px;
+}
+
+.flex-box{
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
