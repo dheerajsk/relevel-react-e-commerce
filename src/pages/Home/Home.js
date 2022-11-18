@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductCard from "../../components/Home/ProductCard/ProductCard";
 import Footer from "../../components/Shared/Footer/Footer";
 import Header from "../../components/Shared/Header/Header";
@@ -8,22 +8,40 @@ function Home() {
   // whenever there is achange in products, it will force component refresh.
 
   const [products, setProducts] = useState([]);
+  const [click, setClick] = useState(0);
+  const [click2, setClick2] = useState(100);
   let data = "My Data";
 
-  fetch("Product.json")
-    // calling json function.
-    .then((res) => res.json())
-    // listening for json function to return.
-    .then((res) => {
-      setProducts(res);
-      console.log(products.length);
-    });
+  useEffect(() => {
+    fetch("Product.json")
+      // calling json function.
+      .then((res) => res.json())
+      // listening for json function to return.
+      .then((res) => {
+        setProducts(res);
+        console.log("Fetch called");
+      });
+  }, []);
 
   return (
     <div>
       <Header />
       {/* Products */}
       <div>
+        <h1>{click}</h1>
+        <h1>{click2}</h1>
+        <button
+          onClick={() => {
+            setClick(click + 1);
+          }}>
+          Click
+        </button>
+        <button
+          onClick={() => {
+            setClick2(click2 + 1);
+          }}>
+          Click 2
+        </button>
         <h3>{products && products.length}</h3>
         <h1>{data}</h1>
         <ProductCard />
