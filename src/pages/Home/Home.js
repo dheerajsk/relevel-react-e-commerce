@@ -49,6 +49,7 @@ function Home() {
           {products.map((product, i) => (
             <div className="col-3">
               <ProductCard item={product} index={i} />
+              <h1 id="header1"></h1>
             </div>
           ))}
         </div>

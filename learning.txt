@@ -12,9 +12,7 @@ React Module.
 
 
 3. How to create a project. - Done
-4. Hwo React Starts - Done.
-    
-
+4. How React Starts - Done.
 4. How to run project. - Done.
 5. Folders and file structures. - Done.
 6. Components. - Done.
@@ -23,8 +21,12 @@ React Module.
 8. Virtual DOM - Done.
 9. Lifecycle hooks. - useState.
 10. States. - Done.
-11. useEffect.
-11. Props.
+11. useEffect. - Done.
+22. Data Binding. - Done.
+20. Styling components. - Done.
+11. Props. - Done.
+
+
 12. Event handling.
 13. Data passing.
 14. Event Passing.
@@ -33,9 +35,7 @@ React Module.
 17. Why redux
 18. HOw redux is implemented.
 19. Routers and Navigations.
-20. Styling components.
 21. HTTP Calls./API Calls.
-22. Data Binding.
 23. Form Validation library.
 
 

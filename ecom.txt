@@ -10,6 +10,12 @@ Home Page.
 
 Order.
     => Cart
+        => Product image, name, dropdown(quantity)
+        1. Cart Page copmonent.
+            read cart data from json.
+            pass data and render cartitem components.
+        2. CartItem component.
+        
     => Checkout
 
 WishList
