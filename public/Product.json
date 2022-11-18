@@ -45,5 +45,17 @@
         "price":"50000",
         "detail":"4K Wi‑Fi with 64GB Storage (3rd Generation)",
         "image":"https://m.media-amazon.com/images/I/616bgkA2J0L._SX679_.jpg"
+    },
+    {
+        "name":"Amazon Basics 20000mAh",
+        "detail":"Amazon Basics 20000mAh Lithium Polymer 18W Fast Charging Power Bank | Triple Output (Type C, 2 USB) and Dual Input (Type C, Micro USB) Ports | Metallic Body, Black",
+        "price":"1439",
+        "image":"https://m.media-amazon.com/images/I/6195mjIuczL._SL1500_.jpg"
+    },
+    {
+        "name":"Atomic Habits",
+        "detail":"The life-changing million copy bestseller",
+        "price":"414",
+        "image":"https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg"
     }
 ]

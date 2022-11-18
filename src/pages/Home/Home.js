@@ -8,9 +8,9 @@ function Home() {
   // whenever there is achange in products, it will force component refresh.
 
   const [products, setProducts] = useState([]);
-  const [click, setClick] = useState(0);
-  const [click2, setClick2] = useState(100);
-  let data = "My Data";
+  // const [click, setClick] = useState(0);
+  // const [click2, setClick2] = useState(100);
+  // let data = "My Data";
 
   useEffect(() => {
     fetch("Product.json")
@@ -19,7 +19,6 @@ function Home() {
       // listening for json function to return.
       .then((res) => {
         setProducts(res);
-        console.log("Fetch called");
       });
   }, []);
 
@@ -28,7 +27,7 @@ function Home() {
       <Header />
       {/* Products */}
       <div>
-        <h1>{click}</h1>
+        {/* <h1>{click}</h1>
         <h1>{click2}</h1>
         <button
           onClick={() => {
@@ -41,10 +40,18 @@ function Home() {
             setClick2(click2 + 1);
           }}>
           Click 2
-        </button>
-        <h3>{products && products.length}</h3>
-        <h1>{data}</h1>
-        <ProductCard />
+        </button> */}
+        {/* <h3>{products && products.length}</h3>
+        <h1>{data}</h1> */}
+
+        {/* Products */}
+        <div className="row">
+          {products.map((product, i) => (
+            <div className="col-3">
+              <ProductCard item={product} index={i} />
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

@@ -1,16 +1,17 @@
 import "./ProductCard.css";
 
-function ProductCard() {
+function ProductCard(values) {
+
   return (
     <div className="card">
       <img
-        src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655662/Croma%20Assets/Communication/Mobiles/Images/261979_oq7vjv.png/mxw_640,f_auto"
+        src={values.item.image}
         alt="..."></img>
       <hr />
       <div className="card-body">
-        <h5 className="card-title">iPhone 14</h5>
-        <p className="card-text">&#8377; 95000</p>
-        <p className="card-text">Created By Apple.</p>
+        <h5 className="card-title">{values.item.name}</h5>
+        <p className="card-text">&#8377; {values.item.price}</p>
+        <p className="card-text">{values.item.detail}</p>
         <a href="#" className="btn btn-success flex-box">
           <svg
             xmlns="http://www.w3.org/2000/svg"
