@@ -33,12 +33,7 @@ function Home() {
     <div>
       <Header />
       {/* Products */}
-      <button
-          onClick={() => {
-            setClick(click + 1);
-          }}>
-          Click
-        </button>
+      
       <div>
         {/* <h1>{click}</h1>
         <h1>{click2}</h1>
