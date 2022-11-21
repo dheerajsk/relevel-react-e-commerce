@@ -4,6 +4,13 @@ img{
     width: 260px;
 }
 
+.card-title{
+    padding: 12px;
+    font-size: 15px;
+    min-height: 60px;
+    border-bottom: 1px solid lightblue;
+}
+
 .card{
     margin: 16px;
 }
@@ -13,5 +20,14 @@ img{
     display: flex;
     width: fit-content;
     justify-content: center;
+    align-items: center;
+}
+
+svg{
+    fill: gold;
+}
+
+.stars{
+    display: flex;
     align-items: center;
 }

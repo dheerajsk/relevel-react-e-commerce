@@ -25,6 +25,7 @@ React Module.
 22. Data Binding. - Done.
 20. Styling components. - Done.
 11. Props. - Done.
+12. API.
 
 
 12. Event handling.
@@ -77,3 +78,7 @@ State =>
 3. Allows data to survive.
 
 Destroy,
+
+
+
+API: Interface.
