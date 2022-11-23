@@ -1,0 +1,21 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.login{
+    height: 100%;
+}
+
+.login-form{
+    width: 30%;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 36px;
+}

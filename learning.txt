@@ -29,13 +29,14 @@ React Module.
 13. API Methods.
 12. Event handling. - Done.
 13. Data passing. - Done.
+19. Routers and Navigations. - Done.
+
 14. Event Passing.
 15. Why Context API.
 16. Implement context api.
 17. Why redux
 18. HOw redux is implemented.
-19. Routers and Navigations. - Done.
-21. HTTP Calls./API Calls.
+21. HTTP Calls./API Calls. - P. Done.
 23. Form Validation library.
 
 
@@ -81,3 +82,13 @@ Destroy,
 
 
 API: Interface.
+
+
+API Methods.
+
+GET => To get data from servers.
+POST => TO add something to server.
+PUT => To update data.
+DELETE => To delete a data.
+
+body => payload.
