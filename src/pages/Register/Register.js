@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 function Register() {
   const [user, setUser] = useState({});
 
+  const navigate = useNavigate();
+
   function handleFormSubmit(event) {
+
+    // console.log(JSON.stringify(user));
+    // redirect to login.
+    navigate("/login");
   }
 
   return (

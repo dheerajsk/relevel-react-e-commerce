@@ -1,10 +1,12 @@
 import "./Login.css";
 
 function Login() {
+  function handleLogin() {}
+
   return (
     <div className="container">
       <h3>Please login.</h3>
-      <form className="login-form" action="">
+      <form onSubmit={handleLogin} className="login-form" action="">
         <div className="mb-3">
           <label className="form-label" htmlFor="">
             Email
@@ -18,7 +20,9 @@ function Login() {
           <input type="password" className="form-control" />
         </div>
 
-        <button className="float-end btn btn-primary">Sign In</button>
+        <button type="submit" className="float-end btn btn-primary">
+          Sign In
+        </button>
       </form>
     </div>
   );
