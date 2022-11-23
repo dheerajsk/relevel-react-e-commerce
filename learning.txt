@@ -27,8 +27,6 @@ React Module.
 11. Props. - Done.
 12. API. - Done.
 13. API Methods.
-
-
 12. Event handling. - Done.
 13. Data passing. - Done.
 14. Event Passing.
@@ -36,7 +34,7 @@ React Module.
 16. Implement context api.
 17. Why redux
 18. HOw redux is implemented.
-19. Routers and Navigations.
+19. Routers and Navigations. - Done.
 21. HTTP Calls./API Calls.
 23. Form Validation library.
 

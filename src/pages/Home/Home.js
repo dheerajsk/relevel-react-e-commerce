@@ -20,11 +20,9 @@ function Home() {
       .then((res) => res.json())
       // listening for json function to return.
       .then((res) => {
-        console.log("fetching data");
         res.forEach(o=>{
           o.rating.rate=Math.ceil(Number(o.rating.rate));
         })
-        console.log(res);
         setProducts(res);
       });
   }, [click]);
@@ -50,8 +48,8 @@ function Home() {
         {/* Products */}
         <div className="row">
           {products.map((product, i) => (
-            <div className="col-3">
-              <ProductCard item={product} index={i} />
+            <div key={product.id} className="col-3">
+              <ProductCard key={product.id} item={product} index={i} />
               <h1 id="header1"></h1>
             </div>
           ))}

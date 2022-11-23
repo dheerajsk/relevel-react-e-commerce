@@ -5,10 +5,6 @@ function Register() {
   const [user, setUser] = useState({});
 
   function handleFormSubmit(event) {
-    console.log("hi");
-    console.log(user);
-    console.log(user.name);
-    console.log(user.address);
   }
 
   return (
