@@ -25,11 +25,12 @@ React Module.
 22. Data Binding. - Done.
 20. Styling components. - Done.
 11. Props. - Done.
-12. API.
+12. API. - Done.
+13. API Methods.
 
 
-12. Event handling.
-13. Data passing.
+12. Event handling. - Done.
+13. Data passing. - Done.
 14. Event Passing.
 15. Why Context API.
 16. Implement context api.

@@ -15,7 +15,7 @@ function Header(){
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0 links">
               <li className="nav-item">
-                <a className="nav-link" href="#">Register</a>
+                <a className="nav-link" href="/register">Register</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Sign In</a>
