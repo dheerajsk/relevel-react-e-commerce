@@ -24,3 +24,9 @@ Product Page.
     => Reviews.
 About App.
 Profile.
+
+
+
+1. Add all the prices.
+2. Delete button.
+3. Footer.
