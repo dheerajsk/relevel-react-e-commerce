@@ -32,11 +32,15 @@ function Cart() {
   }
 
   // 1. Update Total Price = sum of price*quantity for each cart items.
+  useEffect(() => {});
   function updateTotalPrice(res) {
     let sum = 0;
-    for (let i = 0; i < res.length; i++) {
-      sum = sum + Number(res[i].price) * Number(res[i].qty);
-    }
+    // for (let i = 0; i < res.length; i++) {
+    //   sum = sum + Number(res[i].price) * Number(res[i].qty);
+    // }
+    sum = res.reduce((prev, curr) => {
+      return prev + +curr.price * curr.qty;
+    }, 0);
     setTotalPrice(sum);
   }
 
