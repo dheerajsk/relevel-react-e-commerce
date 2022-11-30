@@ -4,22 +4,25 @@ import './CartItem.css';
 
 function CartItem(prop)
 { 
-    console.log(prop.item);
     let [quantity, setQuantity] = useState(1);
     let [totalPrice, setPrice]=useState(prop.item.price);
 
     useEffect(()=>{
+        console.log("effect");
+        if(quantity>0){
         setPrice(prop.item.price);
+        }
     },[prop]);
 
     function handleQuantityChange(newQuantity){
-        console.log(newQuantity);
+        // console.log(newQuantity);
         if(newQuantity>0){
             totalPrice = Number(prop.item.price)*newQuantity;
             setQuantity(newQuantity);
             setPrice(totalPrice);
         }else{
             totalPrice=0;
+            // console.log(totalPrice);
             setPrice(totalPrice);
             setQuantity(0);
         }
