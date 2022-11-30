@@ -35,6 +35,14 @@ function Cart() {
     setTotalPrice(sum);
   }
 
+  function deleteItem(index) {
+    let items = cartItems;
+    items.splice(index, 1);
+    console.log(items);
+    setCartItem(items.slice());
+    updateTotalPrice(items);
+  }
+
   return (
     <div className="cart-container">
       <Header />
@@ -46,6 +54,7 @@ function Cart() {
             // 4. Pass function as props.
             updatePrice={updatePrice}
             key={index}
+            delete={deleteItem}
             item={item}
             index={index}
           />
