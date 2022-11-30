@@ -34,7 +34,7 @@ function CartItem(prop)
             <img className="cart-img" src={prop.item.image}></img>
        </div>
        <div className="container">
-           <h4>{prop.item.name}</h4>
+           <h4>{prop.item.title}</h4>
        </div>
        </div>
 

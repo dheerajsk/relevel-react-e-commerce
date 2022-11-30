@@ -21,6 +21,7 @@ function Home() {
       // listening for json function to return.
       .then((res) => {
         res.forEach(o=>{
+          o.qty=1;
           o.rating.rate=Math.ceil(Number(o.rating.rate));
         })
         setProducts(res);

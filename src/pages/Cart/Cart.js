@@ -9,12 +9,17 @@ function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    fetch("product.json")
-      .then((res) => res.json())
-      .then((res) => {
-        updateTotalPrice(res);
-        setCartItem(res);
-      });
+    let cart = localStorage.getItem("cart");
+    let cartItems = JSON.parse(cart);
+    setCartItem(cartItems);
+    updateTotalPrice(cartItems);
+
+    // fetch("product.json")
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     updateTotalPrice(res);
+    //     setCartItem(res);
+    //   });
   }, []);
 
   // Step 3: takes new quantity and update cart items.
