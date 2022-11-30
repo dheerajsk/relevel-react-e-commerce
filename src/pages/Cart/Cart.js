@@ -24,6 +24,7 @@ function Cart() {
 
   // Step 3: takes new quantity and update cart items.
   function updatePrice(item, newQuantity) {
+    
     let items = cartItems;
     let cartItemIndex = items.findIndex((i) => i.name === item.name);
     items[cartItemIndex].qty = newQuantity;
@@ -37,7 +38,7 @@ function Cart() {
     for (let i = 0; i < res.length; i++) {
       sum = sum + Number(res[i].price) * Number(res[i].qty);
     }
-    setTotalPrice(sum);
+    setTotalPrice(Math.ceil(sum));
   }
 
   function deleteItem(index) {
