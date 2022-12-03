@@ -9,18 +9,19 @@ function Cart() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    fetch("product.json")
-      .then((res) => res.json())
-      .then((res) => {
-        updateTotalPrice(res);
-        setCartItem(res);
-      });
+
+    const products = localStorage.getItem("cartItems");
+    if(products){
+      const items = JSON.parse(products);
+      updateTotalPrice(items);
+        setCartItem(items);
+    }
   }, []);
 
   // Step 3: takes new quantity and update cart items.
   function updatePrice(item, newQuantity) {
     let items = cartItems;
-    let cartItemIndex = items.findIndex((i) => i.name === item.name);
+    let cartItemIndex = items.findIndex((i) => i.title === item.title);
     items[cartItemIndex].qty = newQuantity;
     setCartItem(items);
     updateTotalPrice(items);
@@ -35,6 +36,14 @@ function Cart() {
     setTotalPrice(sum);
   }
 
+  function deleteItem(index) {
+    let items = cartItems;
+    items.splice(index, 1);
+    setCartItem(items);
+    updateTotalPrice(items);
+    localStorage.setItem("cartItems", JSON.stringify(items));
+  }
+
   return (
     <div className="cart-container">
       <Header />
@@ -46,6 +55,7 @@ function Cart() {
             // 4. Pass function as props.
             updatePrice={updatePrice}
             key={index}
+            delete={deleteItem}
             item={item}
             index={index}
           />

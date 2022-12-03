@@ -92,3 +92,10 @@ PUT => To update data.
 DELETE => To delete a data.
 
 body => payload.
+
+
+
+1. Handle Add to cart event.
+2. Store data to localStorage.
+3. CartPage-> Remove json dependencies.
+4. Load data from localStorage
