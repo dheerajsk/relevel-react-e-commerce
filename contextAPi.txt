@@ -1,0 +1,9 @@
+
+Steps
+
+1. Create Context. - Done.
+2. Initialize Store. - Done.
+3. Initialize COntext. - Done.
+4. Add dispatchers. - Done.
+5. Start Modifying data.
+6. Listening data.
