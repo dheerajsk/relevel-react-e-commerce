@@ -42,15 +42,9 @@ function Cart() {
   function deleteItem(index) {
     let items = cartItems;
     items.splice(index, 1);
-    setCartItem(items.slice());
-    updateTotalPrice(items);
-  }
-
-  function deleteItem(index) {
-    let items = cartItems;
-    items.splice(index, 1);
     setCartItem(items);
     updateTotalPrice(items);
+    // update items in localStorage.
     localStorage.setItem("cartItems", JSON.stringify(items));
   }
 

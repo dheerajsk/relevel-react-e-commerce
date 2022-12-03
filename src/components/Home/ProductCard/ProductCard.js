@@ -1,24 +1,10 @@
 import "./ProductCard.css";
 
 function ProductCard(values) {
-  function handleAddToCart() {
-    let cart = localStorage.getItem("cart");
-    if (!cart) {
-      let cartItems = [];
-      cartItems.push(values.item);
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-    } else {
-      let cartItems = JSON.parse(cart);
-      cartItems.push(values.item);
-      localStorage.setItem("cart", JSON.stringify(cartItems));
-    }
-  }
-
+  
   function AddtoCart(){
-
     // cartItems is the key.
     const products = localStorage.getItem("cartItems");
-
     // if there are no cartitems
     if(!products){
       let cartItems=[];
@@ -30,6 +16,7 @@ function ProductCard(values) {
       cartItems.push(values.item);
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
+    values.notify();
   }
 
 

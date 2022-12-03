@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Header.css';
 
-function Header(){
+function Header(props){
 
     const [count, setCount]=useState(0);
 
@@ -11,8 +11,7 @@ function Header(){
         const cartItems = JSON.parse(items);
         setCount(cartItems.length);
       }
-    },[])
-
+    },[props])
 
     return (
         <nav className="navbar navbar-expand-lg bg-blue">

@@ -11,7 +11,13 @@
 .container-1
 {
     display: flex;
-    width: 50%;
+    width: 70%;
+}
+.container-2
+{
+    display: flex;
+    width: 30%;
+    align-items: center;
 }
 
 .container

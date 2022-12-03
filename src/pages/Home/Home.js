@@ -10,9 +10,7 @@ function Home() {
   // whenever there is achange in products, it will force component refresh.
 
   const [products, setProducts] = useState([]);
-  const [click, setClick] = useState(0);
-  // const [click2, setClick2] = useState(100);
-  // let data = "My Data";
+  const [cartItemCount, setCartItemCount]=useState(0);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -26,32 +24,31 @@ function Home() {
         })
         setProducts(res);
       });
-  }, [click]);
+      notifyCartUpdate();
+  }, []);
+
+  function notifyCartUpdate(){
+    console.log("Home is notified");
+    const items = localStorage.getItem("cartItems");
+      if(items){
+        const cartItems = JSON.parse(items);
+        setCartItemCount(cartItems.length);
+      }
+  }
 
   return (
     <div>
-      <Header />
-      {/* Products */}
-      
+      <Header
+        cartItemCount={cartItemCount} />
       <div>
-        {/* <h1>{click}</h1>
-        <h1>{click2}</h1>
-       
-        <button
-          onClick={() => {
-            setClick2(click2 + 1);
-          }}>
-          Click 2
-        </button> */}
-        {/* <h3>{products && products.length}</h3>
-        <h1>{data}</h1> */}
-
-        {/* Products */}
         <div className="row">
           {products.map((product, i) => (
             <div key={product.id} className="col-3">
-              <ProductCard key={product.id} item={product} index={i} />
-              <h1 id="header1"></h1>
+              <ProductCard 
+              key={product.id} 
+              item={product} 
+              index={i}
+              notify={notifyCartUpdate} />
             </div>
           ))}
         </div>
