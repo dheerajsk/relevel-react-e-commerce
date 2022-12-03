@@ -1,6 +1,18 @@
 import "./ProductCard.css";
 
 function ProductCard(values) {
+  function handleAddToCart() {
+    let cart = localStorage.getItem("cart");
+    if (!cart) {
+      let cartItems = [];
+      cartItems.push(values.item);
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+    } else {
+      let cartItems = JSON.parse(cart);
+      cartItems.push(values.item);
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+    }
+  }
 
   function AddtoCart(){
 
@@ -35,9 +47,9 @@ function ProductCard(values) {
       <div className="card-body">
         <p className="card-text">{values.item.category}</p>
         <p className="stars">
-          {stars.map((x,i) => (
+          {stars.map((x, i) => (
             <svg
-              key={key+i}
+              key={key + i}
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
