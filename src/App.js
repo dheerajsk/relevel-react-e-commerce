@@ -26,6 +26,13 @@ function App() {
           console.log(items);
           break;
         }
+        case "UPDATE_ITEM":{
+          let items = cartItems.slice();
+          let index = items.findIndex(p=> p.id===payload.id);
+          items[index]=payload;
+          setCartItems(items);
+          break;
+        }
         default:{
           console.log("INVALID...");
         }

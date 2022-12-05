@@ -1,33 +1,22 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import AppContext from "../../../context";
 import './CartItem.css';
 
 function CartItem(prop)
 { 
-    let [quantity, setQuantity] = useState(1);
     let [totalPrice, setPrice]=useState(prop.item.price);
-
+    const {dispatcherEvents} = useContext(AppContext);
+    
     useEffect(()=>{
-        console.log("effect");
-        if(quantity>0){
-        setPrice(prop.item.price);
-        }
-    },[prop]);
+        let price = prop.item.qty*prop.item.price;
+        setPrice(price);
+    }, [prop]);
 
     function handleQuantityChange(newQuantity){
-     
-        if(newQuantity>0){
-            totalPrice = Number(prop.item.price)*newQuantity;
-            setQuantity(newQuantity);
-            setPrice(totalPrice);
-        }else{
-            totalPrice=0;
-            // console.log(totalPrice);
-            setPrice(totalPrice);
-            setQuantity(0);
-        }
-        // Step 5: Call parent's function with new quantity.
-        prop.updatePrice(prop.item, newQuantity);
+        prop.item.qty=newQuantity
+        console.log(prop.item);
+        dispatcherEvents("UPDATE_ITEM", prop.item);
     }
 
   return(
@@ -49,9 +38,9 @@ function CartItem(prop)
 
 
        <div className="quantity btn-group">
-       <button className="btn btn-minus" onClick={() => handleQuantityChange(quantity<=1?0:quantity-1)}>-</button>
-          <button className="btn btn-primary">{quantity}</button>
-          <button className="btn btn-plus" onClick={() => handleQuantityChange(quantity+1)}>+</button>
+       <button className="btn btn-minus" onClick={() => handleQuantityChange(prop.item.qty<=1?0:prop.item.qty-1)}>-</button>
+          <button className="btn btn-primary">{prop.item.qty}</button>
+          <button className="btn btn-plus" onClick={() => handleQuantityChange(prop.item.qty+1)}>+</button>
        </div>
        </div>
     </div>

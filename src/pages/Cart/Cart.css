@@ -7,4 +7,12 @@
 
 .cart-container{
     margin:24px;
+    margin-top: 96px;
+}
+
+.cart-header{
+    width: 100%;
+    position:fixed;
+    top:0;
+    z-index: 999;
 }
