@@ -10,7 +10,6 @@ function Home() {
   // whenever there is achange in products, it will force component refresh.
 
   const [products, setProducts] = useState([]);
-  const [cartItemCount, setCartItemCount]=useState(0);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -24,22 +23,21 @@ function Home() {
         })
         setProducts(res);
       });
-      notifyCartUpdate();
   }, []);
 
-  function notifyCartUpdate(){
-    console.log("Home is notified");
-    const items = localStorage.getItem("cartItems");
-      if(items){
-        const cartItems = JSON.parse(items);
-        setCartItemCount(cartItems.length);
-      }
-  }
+  // function notifyCartUpdate(){
+  //   console.log("Home is notified");
+  //   const items = localStorage.getItem("cartItems");
+  //     if(items){
+  //       const cartItems = JSON.parse(items);
+  //       setCartItemCount(cartItems.length);
+  //     }
+  // }
 
   return (
     <div>
       <Header
-        cartItemCount={cartItemCount} />
+        />
       <div>
         <div className="row">
           {products.map((product, i) => (
@@ -48,7 +46,7 @@ function Home() {
               key={product.id} 
               item={product} 
               index={i}
-              notify={notifyCartUpdate} />
+              />
             </div>
           ))}
         </div>

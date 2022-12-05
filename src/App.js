@@ -3,8 +3,7 @@ import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
-
-import { createContext } from 'react';
+import AppContext from './context';
 
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
@@ -13,9 +12,6 @@ import { useState } from 'react';
 
 function App() {
 
-  // 1. Create Context for application.
-  const AppContext = createContext();
-
   // 2. Initialize Store.
   const [cartItems, setCartItems]=useState([]);
 
@@ -23,7 +19,11 @@ function App() {
   const dispatcherEvents = (actionType, payload)=>{
       switch(actionType){
         case "ADD_ITEM":{
-          setCartItems(...cartItems, payload);
+          console.log(payload);
+          let items = cartItems.slice();
+          items.push(payload);
+          setCartItems(items);
+          console.log(items);
           break;
         }
         default:{
@@ -34,7 +34,7 @@ function App() {
 
 
   return (
-    // 3. Initializing Context.
+    // 4. Initializing Context.
     <AppContext.Provider value={{cartItems, dispatcherEvents}}>
     <BrowserRouter>
     <Routes>

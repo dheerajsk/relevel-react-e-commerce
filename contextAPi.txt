@@ -5,5 +5,11 @@ Steps
 2. Initialize Store. - Done.
 3. Initialize COntext. - Done.
 4. Add dispatchers. - Done.
-5. Start Modifying data.
+5. Start Modifying data. - Done.
 6. Listening data.
+
+
+1. moved creation of context in separate file.
+2. Update ProductCard to use context instead of localStorage.
+3. Update Home component to remove props drilling and notifiers.
+4. Update Header Component to listen from COntextAPI.

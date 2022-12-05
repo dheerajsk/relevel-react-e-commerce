@@ -1,24 +1,15 @@
+
 import "./ProductCard.css";
+import AppContext from "../../../context";
+import { useContext } from "react";
 
 function ProductCard(values) {
   
-  function AddtoCart(){
-    // cartItems is the key.
-    const products = localStorage.getItem("cartItems");
-    // if there are no cartitems
-    if(!products){
-      let cartItems=[];
-      cartItems.push(values.item);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }else{
-      // there are some existing data.
-      let cartItems = JSON.parse(products);
-      cartItems.push(values.item);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
-    values.notify();
-  }
+  const {dispatcherEvents} = useContext(AppContext);
 
+  function AddtoCart(){
+    dispatcherEvents("ADD_ITEM", values.item);
+  }
 
   const key = values.item.id+"svg";
 
