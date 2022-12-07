@@ -19,6 +19,10 @@ function CartItem(prop)
         dispatcherEvents("UPDATE_ITEM", prop.item);
     }
 
+    function handleDeleteClick(){
+      dispatcherEvents("DELETE_ITEM", prop.item.id);
+    }
+
   return(
     <div className="cart-item">
        <div className="container-1">
@@ -31,7 +35,7 @@ function CartItem(prop)
        </div>
 
        <div className="container-2">
-       <button className="btn btn-danger" onClick={()=> {prop.delete(prop.index)}}>Delete</button>
+       <button className="btn btn-danger" onClick={handleDeleteClick}>Delete</button>
        <div className="container">
             <h4>&#8377; {totalPrice}</h4>
        </div>

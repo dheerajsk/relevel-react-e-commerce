@@ -33,6 +33,13 @@ function App() {
           setCartItems(items);
           break;
         }
+        case "DELETE_ITEM":{
+          let items = [...cartItems];
+          let index = items.findIndex(p=> p.id===payload);
+          items.splice(index, 1);
+          setCartItems(items);
+          break;
+        }
         default:{
           console.log("INVALID...");
         }
